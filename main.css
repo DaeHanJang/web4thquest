@@ -1,0 +1,113 @@
+* {
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+}
+#base {
+    width: 1280px; height: 720px;
+    background-color: rgb(50, 50, 50); margin: 0px auto;
+    display: flex;
+}
+#base .title {
+    width: 280px; height: 100%;
+    border-right: 2px solid white;
+    display: flex; flex-direction: column;
+}
+#base .title .title_up {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#base .title .title_up p {
+    color: lightgray;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30pt;
+    line-height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#base .title .title_down {
+    height: 50%; padding-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#base .title .title_down p {
+    color: gray;
+    font-size: 10pt;
+    line-height: 16pt;
+    text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+#base .contents {
+    width: 1000px; height: 720px;
+    display: flex; flex-direction: column;
+}
+#base .contents nav {
+    width: 100%; height: 120px;
+    border-bottom: 2px solid white;
+    position: relative;
+}
+#base .contents nav img{
+    width: 30px;
+    position: absolute;
+    bottom: 10px; right: 10px;
+}
+#base .contents section {
+    width: 100%; height: 600px;
+    display: flex;
+}
+#base .contents article {
+    width: 250px; height: 100%;
+    opacity: 0.4;
+    padding: 70px 40px;
+    display: flex; flex-direction: column;
+    position: relative;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+}
+#base .contents article:hover {
+    opacity: 1;
+}
+#base .contents article:hover .eventbackground {
+    width: 250px;
+}
+#base .contents article:hover .article_down img {
+    width: 115%;
+}
+#base .contents article .eventbackground {
+    width: 0px; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url("back.png");
+    transition-duration: 0.5s;
+}
+#base .contents article .article_up {
+    color: white;
+    z-index: 1;
+}
+#base .contents article .article_up .type1 {
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 30pt;
+    border-bottom: 1px solid lightgray;
+    display: inline-block;
+}
+#base .contents article .article_up .type2 {
+    font-weight: bold;
+    line-height: 50px;
+}
+#base .contents article .article_down {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+}
+#base .contents article .article_down img {
+    width: 100%;
+    transition-duration: 0.5s;
+}
