@@ -3,17 +3,18 @@
     box-sizing: border-box;
 }
 #base {
-    width: 490px; margin: 20px auto;
+    width: 770px; margin: 20px auto;
     display: flex; flex-wrap: wrap; justify-content: center;
 }
 #base .hero {
-    width: 60px; height: 60px; margin: 1px;
+    width: 100px; height: 100px; margin: 3px;
     background: rgb(50, 50, 50);
-    border: 2px solid white;
-    border-radius: 5px;
+    border: 3px solid white;
+    border-radius: 15px;
     overflow: hidden;
     transform: skewX(-10deg);
     transition-duration: 0.2s;
+    position: relative;
 }
 #base .hero:hover {
     transform: scale(1.5, 1.5) skewX(-10deg);
@@ -23,4 +24,5 @@
 #base .hero img {
     width: 110%;
     transform: skewX(10deg);
+    position: absolute;
 }
